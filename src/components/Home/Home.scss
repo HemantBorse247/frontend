@@ -1,0 +1,38 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    // box-sizing: border-box;
+    text-decoration: none;
+}
+
+.home-container{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+     &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: no-repeat center/auto url("../../assets/bgimg.webp") ;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: -1;
+  }
+  >.home-heading{
+    margin-bottom: 5rem;
+    >h1{
+        font: 600 4rem 'Roboto';
+        color: #e2e2e2;
+        text-shadow: 2px 2px red;
+    }
+  } 
+}
+
+ 
