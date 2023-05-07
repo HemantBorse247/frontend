@@ -36,7 +36,7 @@ const FrontPage = (getTrains) => {
   const [dest, setDest] = useState("");
   const [date, setDate] = useState();
   const [seatClass, setSeatClass] = useState();
-  const [trains, setTrains] = useState({});
+  const [trains, setTrains] = useState();
   const [loadFront, setLoadFront] = useState(true)
 
   const [trainObj, setTrainObj] = useState(null);
@@ -58,16 +58,10 @@ const FrontPage = (getTrains) => {
         setTrains(res.data);
         console.log((res.data));
         let newTrains = res.data
-        // console.log(trains)
+        console.log(trains)
         navigate('/contact', { state: newTrains })
       })
       .catch(err => console.log(err))
-
-
-
-
-
-
   };
 
 
